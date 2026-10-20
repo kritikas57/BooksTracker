@@ -1,0 +1,429 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #faf6ef;
+  color: #392b2b;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  background: #542f36;
+  color: #fff8ee;
+  padding: 22px 8%;
+}
+
+.brand {
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.header p {
+  margin-bottom: 0;
+  color: #e8d6ce;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 0 22px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.eyebrow {
+  color: #94636a;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 8px 0;
+}
+
+h1 span {
+  color: #b88762;
+}
+
+.subtitle {
+  color: #887b72;
+}
+
+.add-btn,
+.submit-btn {
+  background: #713e48;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 7px;
+}
+
+.add-btn:hover,
+.submit-btn:hover {
+  background: #4c2931;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 30px 0 40px;
+}
+
+.stat-card {
+  background: #fffdf8;
+  border: 1px solid #eee3d6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stat-card span {
+  font-size: 10px;
+  color: #88766d;
+  letter-spacing: 1px;
+}
+
+.stat-card h2 {
+  margin: 10px 0 0;
+  color: #713e48;
+  font-size: 30px;
+}
+
+.book-form {
+  background: #fffdf8;
+  border: 1px solid #eadbce;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 35px;
+  max-width: 550px;
+}
+
+.book-form h2 {
+  margin-top: 0;
+  color: #713e48;
+}
+
+.book-form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 14px;
+}
+
+.book-form input,
+.book-form select,
+.filters input,
+.filters select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #dfd1c5;
+  border-radius: 6px;
+  background: #fff;
+  color: #392b2b;
+}
+
+.submit-btn {
+  margin-top: 20px;
+}
+
+.library-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.library-heading h2 {
+  font-size: 25px;
+}
+
+.library-heading span {
+  color: #887b72;
+  font-size: 13px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0 25px;
+}
+
+.filters input {
+  flex: 1;
+}
+
+.filters select {
+  width: 180px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  display: flex;
+  background: #fffdf8;
+  border: 1px solid #eee3d6;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.book-cover {
+  width: 135px;
+  min-height: 245px;
+  flex-shrink: 0;
+  background: #7b454e;
+  color: #fff5e6;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 5px double #c6a17d;
+  margin: 8px;
+}
+
+.book-card:nth-child(3n + 2) .book-cover {
+  background: #526354;
+}
+
+.book-card:nth-child(3n) .book-cover {
+  background: #55516b;
+}
+
+.cover-decoration {
+  color: #e8c99b;
+  font-size: 22px;
+}
+
+.book-cover h3 {
+  font-size: 19px;
+  overflow-wrap: anywhere;
+}
+
+.book-cover p {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.cover-genre {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.book-info {
+  padding: 18px 12px 18px 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.status {
+  display: inline-block;
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 15px;
+  background: #f1e7d8;
+}
+
+.status.finished {
+  background: #dce9d9;
+  color: #3d6844;
+}
+
+.status.reading {
+  background: #f3e2c7;
+  color: #805525;
+}
+
+.pages {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #eadfd5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #94636a;
+}
+
+.progress-text {
+  font-size: 11px;
+  color: #887b72;
+}
+
+.rating {
+  color: #b7833d;
+  letter-spacing: 2px;
+}
+
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 15px;
+}
+
+.book-actions button {
+  border: 1px solid #d9c6b8;
+  background: #faf3e9;
+  color: #542f36;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.book-actions .delete-btn {
+  color: #a33d3d;
+}
+
+.empty {
+  color: #887b72;
+  padding: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  color: #887b72;
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome {
+    flex-direction: column;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters select {
+    width: 100%;
+  }
+
+  .book-cover {
+    width: 110px;
+  }
+}
+
+/* Inline forms inside book cards */
+.card-edit-form {
+  margin-top: 14px;
+  padding: 12px;
+  background: #faf3ed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-edit-form label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #633b3b;
+}
+
+.card-edit-form input,
+.card-edit-form select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #d8c4b8;
+  border-radius: 6px;
+  background: white;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.card-edit-form button,
+.delete-confirm button {
+  padding: 9px;
+  border: none;
+  border-radius: 6px;
+  background: #713f46;
+  color: white;
+  cursor: pointer;
+}
+
+.card-edit-form button:hover,
+.delete-confirm button:hover {
+  background: #512c32;
+}
+
+.card-edit-form button[type="button"],
+.delete-confirm button:last-child {
+  background: #e8ddd5;
+  color: #493333;
+}
+
+.form-error {
+  color: #b3261e;
+  font-size: 12px;
+  margin: 0;
+}
+
+.delete-confirm {
+  margin-top: 12px;
+  padding: 12px;
+  background: #faf0eb;
+  border: 1px solid #e2c7bb;
+  border-radius: 10px;
+}
+
+.delete-confirm p {
+  font-size: 13px;
+  color: #633b3b;
+  margin-top: 0;
+}
+
+.delete-confirm button {
+  margin: 4px 4px 0 0;
+}
